@@ -8,11 +8,6 @@ const client = new Discord.Client()
 
 client.on('ready',()=>{
     console.log(`Connected as ${client.user.tag}`)
-    client.guilds.forEach(guild=>{
-        guild.channels.forEach(channel=>{
-            console.log(channel.name +' '+channel.id + ' ' + channel.type)
-        })
-    })  
 })
 client.on('message',msg=>{
     if(msg.content.startsWith("!")){
